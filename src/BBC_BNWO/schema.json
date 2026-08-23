@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "主角": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "姓名": {
+          "default": "待玩家设定",
+          "type": "string"
+        },
+        "性别": {
+          "default": "女",
+          "type": "string",
+          "enum": [
+            "男",
+            "女"
+          ]
+        },
+        "年龄": {
+          "default": 25,
+          "type": "number"
+        },
+        "旧社会身份": {
+          "default": "待初始化",
+          "type": "string"
+        },
+        "当前地点": {
+          "default": "拾光买手店",
+          "type": "string"
+        },
+        "色情值": {
+          "default": 0,
+          "type": "number"
+        },
+        "色情值阶段": {
+          "default": "阶段一_初触微扰",
+          "type": "string",
+          "enum": [
+            "阶段一_初触微扰",
+            "阶段二_可感知却可忽略",
+            "阶段三_突破微调的渐进质变",
+            "阶段四_从人类质变为色情适应体",
+            "阶段五_彻底绽放与持续依赖"
+          ]
+        },
+        "顾晚信任度": {
+          "default": 0,
+          "type": "number"
+        },
+        "顾晚关系阶段": {
+          "default": "陌生观察",
+          "type": "string",
+          "enum": [
+            "陌生观察",
+            "初步接触",
+            "建立信任",
+            "依赖顾晚",
+            "完全臣服"
+          ]
+        },
+        "伪装完整度": {
+          "default": 100,
+          "type": "number"
+        },
+        "组织认可度": {
+          "default": 0,
+          "type": "number"
+        },
+        "连锁堕进度": {
+          "default": "未触发",
+          "type": "string",
+          "enum": [
+            "未触发",
+            "已被观察",
+            "已牵连他人"
+          ]
+        },
+        "女性专属": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "堕落链阶段": {
+              "default": "未适用",
+              "type": "string",
+              "enum": [
+                "未适用",
+                "圣母婊初期",
+                "圣母婊进阶",
+                "媚黑婊潜伏隐奸期",
+                "媚黑婊觉醒期",
+                "黑桃皇后候补",
+                "黑桃皇后"
+              ]
+            },
+            "婚恋状态": {
+              "default": "待初始化",
+              "type": "string"
+            },
+            "妊娠状态": {
+              "default": "未怀孕",
+              "type": "string"
+            },
+            "黑桃纹身进度": {
+              "default": "无",
+              "type": "string"
+            }
+          }
+        },
+        "男性专属": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "潜力判定": {
+              "default": "未判定",
+              "type": "string",
+              "enum": [
+                "未判定",
+                "无潜力_普通男性",
+                "有潜力_待二层判定"
+              ]
+            },
+            "分流判定": {
+              "default": "未判定",
+              "type": "string",
+              "enum": [
+                "未判定",
+                "龟男贡奴",
+                "媚黑伪娘婊子候选"
+              ]
+            },
+            "最终路径": {
+              "default": "未定",
+              "type": "string",
+              "enum": [
+                "未定",
+                "普通男性",
+                "龟男贡奴",
+                "媚黑伪娘婊子",
+                "黑蜜蝶"
+              ]
+            },
+            "贞操锁状态": {
+              "default": "未佩戴",
+              "type": "string"
+            },
+            "绿帽奴阶段": {
+              "default": "未适用",
+              "type": "string",
+              "enum": [
+                "未适用",
+                "阶段一_隐奸期",
+                "阶段二_双线撞破",
+                "阶段三_终极包裹",
+                "阶段四_彻底绿帽"
+              ]
+            },
+            "作茧仪式阶段": {
+              "default": "未开始",
+              "type": "string",
+              "enum": [
+                "未开始",
+                "阶段一_破茧初痛",
+                "阶段二_茧中失语",
+                "阶段三_蝶梦破碎",
+                "阶段四_鎏色定形",
+                "已完成"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

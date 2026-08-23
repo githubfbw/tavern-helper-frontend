@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* 配色方案 - 明线（拾光买手店）与暗线（黑花国际）双线 */
+  --c-border: #4a3626; /* 深棕：文字、边框 */
+  --c-text-muted: #93826c; /* 次要文字 */
+  --c-track: #ead9c2; /* 进度条底槽 */
+  --c-background: #f7f2ea; /* 米白象牙：陈列柜的克制留白 */
+  --c-surface: #ffffff; /* 卡片底色 */
+  --c-primary: #c89b5c; /* 杏金：拾光招牌暖光 */
+  --c-primary-deep: #a97a3b; /* 杏金深色 */
+  --c-accent: #6b1530; /* 黑桃绛红：媚色、暗线高亮 */
+  --c-accent-deep: #3a0c1c; /* 更深的绛黑，阶段五专用 */
+  --c-danger-start: #3a1b4d; /* 暴露警示渐变起点 */
+  --c-danger-end: #120a16; /* 暴露警示渐变终点 */
+  --c-gold: #c9a227; /* 仪式性里程碑金线 */
+
+  /* 字体 */
+  --font-body: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
