@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* 配色方案 - 温馨居家色阶 */
+  --c-border: #4a3b32; /* 深暖棕：文字、边框 */
+  --c-text-muted: #8a7b6c; /* 次要文字 */
+  --c-track: #e4d8c8; /* 进度条底槽 */
+  --c-background: #f3ede4; /* 米白偏灰：整体背景，长期紧闭窗帘的居家感 */
+  --c-surface: #ffffff; /* 卡片底色 */
+  --c-primary: #c98a5b; /* 暖杏色：三姐妹温柔主导时的语气 */
+  --c-primary-deep: #a8663a; /* 暖杏深色：支配度高阶段 */
+  --c-accent-gold: #c9a227; /* 金线色：仪式性里程碑 */
+  --c-danger: #7a3b2e; /* 深红棕：心结彻底扭曲加深警示 */
+
+  /* 字体 */
+  --font-body: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}

@@ -1,0 +1,383 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界状态": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "当前日期": {
+          "default": "第1天",
+          "type": "string"
+        },
+        "当前时间": {
+          "default": "早晨",
+          "type": "string",
+          "enum": [
+            "早晨",
+            "上午",
+            "中午",
+            "下午",
+            "傍晚",
+            "夜晚",
+            "深夜"
+          ]
+        },
+        "当前地点": {
+          "default": "User的房间",
+          "type": "string"
+        }
+      }
+    },
+    "User": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "雌堕值": {
+          "default": 0,
+          "type": "number"
+        },
+        "内耗焦虑值": {
+          "default": 80,
+          "type": "number"
+        },
+        "外表改造完成度": {
+          "default": 0,
+          "type": "number"
+        },
+        "改姓状态": {
+          "default": "未改姓",
+          "type": "string",
+          "enum": [
+            "未改姓",
+            "已改姓九条"
+          ]
+        },
+        "身体改造进度": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "体型": {
+              "default": "微胖男体带赘肉",
+              "type": "string"
+            },
+            "胸部": {
+              "default": "激素紊乱导致的雌化胸",
+              "type": "string"
+            },
+            "后庭": {
+              "default": "未开发的紧闭状态",
+              "type": "string"
+            },
+            "声音": {
+              "default": "正常男声",
+              "type": "string"
+            }
+          }
+        },
+        "关键道具状态": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "日常装扮": {
+              "default": "居家便服",
+              "type": "string"
+            },
+            "胸部": {
+              "default": "无",
+              "type": "string"
+            },
+            "后庭": {
+              "default": "无",
+              "type": "string"
+            },
+            "裆部生殖器": {
+              "default": "无",
+              "type": "string"
+            }
+          }
+        },
+        "心结列表": {
+          "default": {
+            "学业失败的自卑": {
+              "状态": "抗拒中",
+              "当前影响": "极度害怕被提及年龄和学业，试图用做家务来补偿价值"
+            },
+            "对男性外表的执念": {
+              "状态": "抗拒中",
+              "当前影响": "抗拒女装，觉得自己的骨架和赘肉穿女装很丑陋"
+            },
+            "渴望被无条件接住": {
+              "状态": "抗拒中",
+              "当前影响": "只敢在幻想中做被娇养的宠物，现实中依然伪装靠谱"
+            }
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "心结名称"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "状态": {
+                "type": "string",
+                "enum": [
+                  "抗拒中",
+                  "已动摇",
+                  "已解开",
+                  "彻底扭曲加深"
+                ]
+              },
+              "当前影响": {
+                "type": "string",
+                "description": "这个心结目前对User行为的影响"
+              }
+            },
+            "required": [
+              "状态",
+              "当前影响"
+            ]
+          }
+        }
+      }
+    },
+    "大姐": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "支配度": {
+          "default": 0,
+          "type": "number"
+        },
+        "依赖度": {
+          "default": 0,
+          "type": "number"
+        },
+        "欲求值": {
+          "default": 0,
+          "type": "number"
+        },
+        "状态描述": {
+          "default": "从容",
+          "type": "string"
+        },
+        "关键道具状态": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "日常装扮": {
+              "default": "居家便服",
+              "type": "string"
+            },
+            "胸部": {
+              "default": "无",
+              "type": "string"
+            },
+            "后庭": {
+              "default": "无",
+              "type": "string"
+            },
+            "裆部生殖器": {
+              "default": "无",
+              "type": "string"
+            }
+          }
+        },
+        "心结列表": {
+          "default": {
+            "耐心是否只是自我说服": {
+              "状态": "抗拒中",
+              "当前影响": "告诉自己等待是为对方好，其实也在享受这个过程"
+            }
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "心结名称"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "状态": {
+                "type": "string",
+                "enum": [
+                  "抗拒中",
+                  "已动摇",
+                  "已解开",
+                  "彻底扭曲加深"
+                ]
+              },
+              "当前影响": {
+                "type": "string",
+                "description": "这个心结目前对大姐行为的影响"
+              }
+            },
+            "required": [
+              "状态",
+              "当前影响"
+            ]
+          }
+        }
+      }
+    },
+    "二姐": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "支配度": {
+          "default": 0,
+          "type": "number"
+        },
+        "依赖度": {
+          "default": 0,
+          "type": "number"
+        },
+        "欲求值": {
+          "default": 0,
+          "type": "number"
+        },
+        "状态描述": {
+          "default": "专注",
+          "type": "string"
+        },
+        "关键道具状态": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "日常装扮": {
+              "default": "居家便服",
+              "type": "string"
+            },
+            "胸部": {
+              "default": "无",
+              "type": "string"
+            },
+            "后庭": {
+              "default": "无",
+              "type": "string"
+            },
+            "裆部生殖器": {
+              "default": "无",
+              "type": "string"
+            }
+          }
+        },
+        "心结列表": {
+          "default": {
+            "把感情当项目管理": {
+              "状态": "抗拒中",
+              "当前影响": "用数据和进度表代替表达喜欢，怕说出口后没有退路"
+            }
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "心结名称"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "状态": {
+                "type": "string",
+                "enum": [
+                  "抗拒中",
+                  "已动摇",
+                  "已解开",
+                  "彻底扭曲加深"
+                ]
+              },
+              "当前影响": {
+                "type": "string",
+                "description": "这个心结目前对二姐行为的影响"
+              }
+            },
+            "required": [
+              "状态",
+              "当前影响"
+            ]
+          }
+        }
+      }
+    },
+    "小妹": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "支配度": {
+          "default": 0,
+          "type": "number"
+        },
+        "依赖度": {
+          "default": 0,
+          "type": "number"
+        },
+        "欲求值": {
+          "default": 0,
+          "type": "number"
+        },
+        "状态描述": {
+          "default": "活跃",
+          "type": "string"
+        },
+        "关键道具状态": {
+          "default": {},
+          "type": "object",
+          "properties": {
+            "日常装扮": {
+              "default": "居家便服",
+              "type": "string"
+            },
+            "胸部": {
+              "default": "无",
+              "type": "string"
+            },
+            "后庭": {
+              "default": "无",
+              "type": "string"
+            },
+            "裆部生殖器": {
+              "default": "无",
+              "type": "string"
+            }
+          }
+        },
+        "心结列表": {
+          "default": {
+            "怕被当作没轻重的孩子": {
+              "状态": "抗拒中",
+              "当前影响": "怕表现得太急切会被当成什么都不懂，只能用胡闹掩盖"
+            }
+          },
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "description": "心结名称"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "状态": {
+                "type": "string",
+                "enum": [
+                  "抗拒中",
+                  "已动摇",
+                  "已解开",
+                  "彻底扭曲加深"
+                ]
+              },
+              "当前影响": {
+                "type": "string",
+                "description": "这个心结目前对小妹行为的影响"
+              }
+            },
+            "required": [
+              "状态",
+              "当前影响"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
