@@ -6,7 +6,6 @@
       :gender="user.性别"
       :corruption="user.色情值"
       :stage="user.色情值阶段"
-      :bond_stage="user.顾晚关系阶段"
       :expanded="expanded"
       @toggle="expanded = !expanded"
     />
@@ -30,6 +29,8 @@
         :collar_stage="user.男性专属.绿帽奴阶段"
         :cocoon="user.男性专属.作茧仪式阶段"
       />
+
+      <NpcDrawer :npcs="npcs" />
     </div>
 
     <CeremonyOverlay v-if="ceremony" :title="ceremony.title" :subtitle="ceremony.subtitle" />
@@ -41,12 +42,14 @@ import { computed } from 'vue';
 import CeremonyOverlay from './components/CeremonyOverlay.vue';
 import FemalePanel from './components/FemalePanel.vue';
 import MalePanel from './components/MalePanel.vue';
+import NpcDrawer from './components/NpcDrawer.vue';
 import SocialStatus from './components/SocialStatus.vue';
 import TitleBar from './components/TitleBar.vue';
 import { useDataStore } from './store';
 
 const store = useDataStore();
 const user = computed(() => store.data.主角);
+const npcs = computed(() => store.data.NPC ?? {});
 
 const expanded = useLocalStorage<boolean>('bbc_bnwo_status_bar:expanded', false);
 

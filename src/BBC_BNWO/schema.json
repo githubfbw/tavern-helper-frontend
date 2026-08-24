@@ -45,21 +45,6 @@
             "阶段五_彻底绽放与持续依赖"
           ]
         },
-        "顾晚信任度": {
-          "default": 0,
-          "type": "number"
-        },
-        "顾晚关系阶段": {
-          "default": "陌生观察",
-          "type": "string",
-          "enum": [
-            "陌生观察",
-            "初步接触",
-            "建立信任",
-            "依赖顾晚",
-            "完全臣服"
-          ]
-        },
         "伪装完整度": {
           "default": 100,
           "type": "number"
@@ -168,6 +153,35 @@
                 "已完成"
               ]
             }
+          }
+        }
+      }
+    },
+    "NPC": {
+      "default": {},
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "description": "NPC姓名或代称"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "身份": {
+            "default": "",
+            "type": "string"
+          },
+          "关系阶段": {
+            "default": "陌生",
+            "type": "string"
+          },
+          "信任度": {
+            "default": 0,
+            "type": "number"
+          },
+          "备注": {
+            "default": "",
+            "type": "string"
           }
         }
       }

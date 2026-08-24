@@ -10,37 +10,22 @@
 
     <CorruptionRing :value="corruption" :stage="stage" />
 
-    <div class="bond">
-      <div class="bond-dots">
-        <span v-for="i in 5" :key="i" class="dot" :class="{ active: i <= bond_level }"></span>
-      </div>
-      <div class="bond-label">{{ bond_stage }}</div>
-    </div>
-
     <i class="chevron fa-solid" :class="expanded ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
 import CorruptionRing from './CorruptionRing.vue';
 
-const props = defineProps<{
+defineProps<{
   name: string;
   location: string;
   gender: '男' | '女';
   corruption: number;
   stage: string;
-  bond_stage: string;
   expanded: boolean;
 }>();
 defineEmits<{ toggle: [] }>();
-
-const BOND_STAGES = ['陌生观察', '初步接触', '建立信任', '依赖顾晚', '完全臣服'];
-const bond_level = computed(() => {
-  const idx = BOND_STAGES.indexOf(props.bond_stage);
-  return idx === -1 ? 1 : idx + 1;
-});
 </script>
 
 <style lang="scss" scoped>

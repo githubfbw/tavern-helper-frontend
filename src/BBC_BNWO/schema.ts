@@ -21,14 +21,6 @@ export const Schema = z.object({
         ])
         .prefault('阶段一_初触微扰'),
 
-      顾晚信任度: z
-        .coerce.number()
-        .prefault(0)
-        .transform(v => _.clamp(v, 0, 100)),
-      顾晚关系阶段: z
-        .enum(['陌生观察', '初步接触', '建立信任', '依赖顾晚', '完全臣服'])
-        .prefault('陌生观察'),
-
       伪装完整度: z
         .coerce.number()
         .prefault(100)
@@ -84,6 +76,22 @@ export const Schema = z.object({
         })
         .prefault({}),
     })
+    .prefault({}),
+
+  // 动态NPC档案：随剧情推进新增/更新，key为NPC姓名或代称（如"顾晚""姬崎莉波"）
+  NPC: z
+    .record(
+      z.string().describe('NPC姓名或代称'),
+      z.object({
+        身份: z.string().prefault(''),
+        关系阶段: z.string().prefault('陌生'),
+        信任度: z
+          .coerce.number()
+          .prefault(0)
+          .transform(v => _.clamp(v, 0, 100)),
+        备注: z.string().prefault(''),
+      }),
+    )
     .prefault({}),
 });
 export type Schema = z.output<typeof Schema>;
